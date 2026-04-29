@@ -1,4 +1,4 @@
-# Lab DevSecOps — Semana 9
+# Lab DevSecOps
 ## Arquitectura de Sistemas de Seguridad | CUGDL — UDG
 
 ---

@@ -1,0 +1,29 @@
+# Archivo: .github/workflows/security.yml
+# Lab DevSecOps — Arquitectura de Sistemas de Seguridad CUGDL — Semana 9
+#
+# INSTRUCCIONES PARA EL ALUMNO:
+# Completa este workflow para crear el pipeline de seguridad CI/CD.
+#
+# El pipeline debe:
+#   1. Ejecutarse en cada push a main y en cada Pull Request
+#   2. Etapa SAST: analizar el código con Semgrep
+#      Rulesets mínimos: p/python, p/owasp-top-ten, p/secrets, p/sql-injection
+#   3. Etapa SCA: auditar dependencias con pip-audit
+#   4. Etapa Tests: ejecutar pytest
+#
+# Referencia completa: Guía de Laboratorio Semana 9
+#
+# Cuando termines, haz commit y ve a la pestaña Actions
+# para ver el pipeline ejecutarse automáticamente.
+
+name: Pipeline de Seguridad DevSecOps
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # TU PIPELINE AQUÍ
+  # Agrega las etapas siguiendo las instrucciones de la guía

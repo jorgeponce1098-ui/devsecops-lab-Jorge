@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, abort, render_template
 import sqlite3
 import subprocess
 import os
+import platform
 import logging
 
 app = Flask(__name__)
@@ -125,8 +126,9 @@ def ping():
     if not host:
         abort(400, description='Parámetro host requerido')
     logger.info('Ping a host: %s', host)
+    flag = '-n' if platform.system() == 'Windows' else '-c'
     result = subprocess.run(
-        f'ping -c 1 {host}',
+        f'ping {flag} 1 {host}',
         shell=True,
         capture_output=True,
         text=True,
